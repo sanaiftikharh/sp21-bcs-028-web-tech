@@ -72,7 +72,7 @@ ul {
 }
 a:hover {
   font-size: larger;
-  color: gray;
+  color: grey;
   box-shadow: 0 4px 8px rgb(46, 161, 161);
   border: 2px solid rgb(27, 27, 42);
 }

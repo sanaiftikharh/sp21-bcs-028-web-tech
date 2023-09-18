@@ -113,6 +113,11 @@ ul {
   border: 4px solid rgb(27, 27, 42);
   border-radius: 12rem;
   position: relative;
+  background: linear-gradient(
+    90deg,
+    rgb(188, 186, 186) 50%,
+    rgb(222, 218, 218) 50%
+  );
 }
 .icon i {
   margin: 15px;
@@ -258,4 +263,7 @@ progress[value]::-moz-progress-bar {
   font-size: small;
   font-style: italic;
   font-weight: bold;
+}
+.Profile h2 {
+  font-style: italic;
 }

@@ -150,6 +150,7 @@ ul {
 .common p {
   margin-left: 2rem;
 }
+
 .hobbies i {
   margin-left: 2rem;
 }
@@ -252,4 +253,9 @@ progress[value]::-moz-progress-bar {
 }
 .SkillsContent {
   padding-left: 7%;
+}
+.position {
+  font-size: small;
+  font-style: italic;
+  font-weight: bold;
 }

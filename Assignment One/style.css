@@ -1,0 +1,247 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.CV {
+  display: flex;
+}
+.left img {
+  border-radius: 10rem;
+  width: 10rem;
+  background-color: rgb(46, 161, 161);
+  border-radius: 6rem;
+  margin-top: 2rem;
+}
+.contact {
+  display: flex;
+  align-items: center;
+}
+i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul {
+  list-style-type: none;
+}
+.common {
+  display: flex;
+  text-align: center;
+}
+.left {
+  width: 35%;
+  background-color: rgb(27, 27, 42);
+  color: rgb(222, 218, 218);
+}
+.right {
+  width: 65%;
+  background-color: rgb(222, 218, 218);
+}
+.Profile {
+  margin-top: 4rem;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact i {
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-bottom: 6px;
+  margin-top: 2px;
+  background-color: rgb(46, 161, 161);
+  padding: 0.5rem;
+  border-radius: 3rem;
+  border: 2px solid rgb(222, 218, 218);
+}
+.contact a {
+  color: rgb(222, 218, 218);
+  text-decoration: none;
+}
+
+.name {
+  padding-bottom: 1em;
+  text-align: center;
+}
+.name h1 {
+  color: rgb(46, 161, 161);
+}
+.mainheader {
+  display: flex;
+  height: 4rem;
+}
+
+.Header {
+  display: flex;
+  justify-content: end;
+  margin-left: 1rem;
+}
+.head {
+  color: rgb(222, 218, 218);
+  background-color: rgb(27, 27, 42);
+  width: 90%;
+  height: 2rem;
+  margin-top: 1rem;
+}
+
+.Header1 {
+  display: flex;
+  justify-content: start;
+  margin-right: 1rem;
+}
+.icon {
+  left: -4px;
+}
+.icon1 {
+  right: -4px;
+  margin-left: 1rem;
+}
+.ic {
+  font-size: 25px;
+  color: gray;
+  border: 4px solid rgb(27, 27, 42);
+  border-radius: 12rem;
+  position: relative;
+}
+.icon i {
+  margin: 15px;
+}
+.icon1 i {
+  margin: 15px;
+}
+
+.Header i {
+  margin-left: 1rem;
+}
+.Header h2 {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  font-style: italic;
+}
+.Header1 h2 {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  font-style: italic;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContactContent {
+  padding-left: 3.5rem;
+}
+.comcontent {
+  padding-left: 1.3rem;
+}
+.common p {
+  margin-left: 2rem;
+}
+.hobbies i {
+  margin-left: 2rem;
+}
+.languages img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5rem;
+
+  padding: 2px;
+  border: 2px solid rgb(27, 27, 42);
+  margin-right: 0.5rem;
+}
+.lang1 p {
+  font-size: x-small;
+}
+.langcontent {
+  padding-left: 7.5%;
+  display: flex;
+  width: 25%;
+}
+.lcontent {
+  display: flex;
+}
+.part1 p {
+  font-size: x-small;
+}
+.part1 {
+  display: flex;
+}
+.part2 {
+  display: flex;
+}
+.part2 p {
+  font-size: x-small;
+}
+.pic {
+  width: 20%;
+}
+.details {
+  width: 40%;
+}
+.Education ul {
+  list-style-type: square;
+  margin-left: 2rem;
+}
+.Experience ul {
+  list-style-type: square;
+  margin-left: 2rem;
+}
+.ContentItem {
+  display: flex;
+  color: rgb(27, 27, 42);
+  font-size: medium;
+}
+.date {
+  width: 40%;
+}
+.info {
+  width: 60%;
+}
+.info p {
+  margin: 2px;
+}
+.bullet {
+  color: rgb(46, 161, 161);
+  font-size: 1.5rem;
+}
+.picture {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+progress[value] {
+  --color: rgb(46, 161, 161); /* the progress color */
+  --background: rgb(222, 218, 218); /* the background color */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid rgb(46, 161, 161);
+  width: 200px;
+  height: 10px;
+  margin: 0 10px;
+  background: var(--background);
+}
+progress[value]::-webkit-progress-bar {
+  background: var(--background);
+}
+progress[value]::-webkit-progress-value {
+  background: var(--color);
+}
+progress[value]::-moz-progress-bar {
+  background: var(--color);
+}
+
+.skillpart {
+  display: flex;
+}
+.SkillsContent {
+  padding-left: 7%;
+}

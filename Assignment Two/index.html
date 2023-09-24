@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,37 +16,353 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container-fluid">
-      <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="logo.png" class="img-fluid logo" alt="..."></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                      <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Features</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#">Pricing</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                      </li>
-                  </ul>
+    <!-- Header -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top custom-navbar"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
+          href="index.html"
+        >
+          <img
+            src="unique.png"
+            class="img-fluid"
+            alt="Bootstrap"
+            width="100"
+            height="30"
+          />
+        </a>
+        <div class="order-lg-2 nav-btns nav-icons">
+          <button type="button" class="btn position-relative">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <!-- <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >5</span 
+            > -->
+          </button>
+          <button type="button" class="btn position-relative">
+            <i class="fa-solid fa-heart"></i>
+            <!-- <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >2</span
+            > -->
+          </button>
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse order-lg-1"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a
+                class="nav-link text-uppercase text-dark"
+                aria-current="page"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase text-dark" href="#all">All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase text-dark" href="#stitched"
+                >Stitched</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase text-dark" href="#unstitched"
+                >Unstitched</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase text-dark" href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="home" class="home">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="home-banner-1">
+              <div class="home-banner-text">
+                <h1>Women</h1>
+                <h2>Sale upto 70% off</h2>
+                <button type="button" class="btn btn-danger">
+                  Our Products
+                </button>
               </div>
+            </div>
           </div>
-      </nav>
-      </header>
-    <div class="Body"></div>
-    <div class="Footer"></div>
+          <div class="carousel-item">
+            <div class="home-banner-2">
+              <div class="home-banner-text">
+                <h1>Kids</h1>
+                <h2>Sale upto 80% off</h2>
+                <button type="button" class="btn btn-danger">
+                  Our Products
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- OFFER SECTION -->
+      <div class="offers">
+        <div class="container">
+          <div class="row">
+            <!-- BOx 1 -->
+            <div class="col-xs-6 col-sm-4 mb-lg-1 mb-2">
+              <a href="#">
+                <div class="offer-box text-center position-relative">
+                  <div class="offer-inner">
+                    <div class="offer-image position-relative overflow-hidden">
+                      <img src="offer1.jpg" alt="Offers" class="img-fluid" />
+                      <div class="offer-overlay"></div>
+                    </div>
+                    <div class="offer-info">
+                      <div class="offer-info-inner">
+                        <h1 class="heading-bigger text-capitalize">Sale 30%</h1>
+                        <h5
+                          class="offer-title-1 text-uppercase font-weight-bold"
+                        >
+                          Don't miss this chance
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn btn-danger text-uppercase mt-4"
+                        >
+                          Show Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- BOX 2 -->
+            <div
+              class="col-xs-6 col-sm-4 mb-lg-0 mb-4 d-flex flex-column justify-content-between"
+            >
+              <a href="#">
+                <div
+                  class="offer-box text-center position-relative mb-4 mb-sm-0 mb-lg-0"
+                >
+                  <div class="offer-inner">
+                    <div class="offer-image position-relative overflow-hidden">
+                      <img src="offer2.jpg" alt="Offers" class="img-fluid" />
+                      <div class="offer-overlay"></div>
+                    </div>
+                    <div class="offer-info">
+                      <div class="offer-info-inner">
+                        <h1 class="heading-bigger text-capitalize">Sale 70%</h1>
+                        <h5
+                          class="offer-title-1 text-uppercase font-weight-bold"
+                        >
+                          Don't miss this chance
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn btn-danger text-uppercase mt-4"
+                        >
+                          Show Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="offer-box text-center position-relative">
+                  <div class="offer-inner">
+                    <div class="offer-image position-relative overflow-hidden">
+                      <img src="offer3.jpg" alt="Offers" class="img-fluid" />
+                      <div class="offer-overlay"></div>
+                    </div>
+                    <div class="offer-info">
+                      <div class="offer-info-inner">
+                        <h1 class="heading-bigger text-capitalize">Sale 50%</h1>
+                        <h5
+                          class="offer-title-1 text-uppercase font-weight-bold"
+                        >
+                          Don't miss this chance
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn btn-danger text-uppercase mt-4"
+                        >
+                          Show Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-xs-6 col-sm-4 mb-lg-0 mb-4">
+              <a href="#">
+                <div class="offer-box text-center position-relative">
+                  <div class="offer-inner">
+                    <div class="offer-image position-relative overflow-hidden">
+                      <img src="offer4.jpg" alt="Offers" class="img-fluid" />
+                      <div class="offer-overlay"></div>
+                    </div>
+                    <div class="offer-info">
+                      <div class="offer-info-inner">
+                        <h1 class="heading-bigger text-capitalize">Sale 30%</h1>
+                        <h5
+                          class="offer-title-1 text-uppercase font-weight-bold"
+                        >
+                          Don't miss this chance
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn btn-danger text-uppercase mt-4"
+                        >
+                          Show Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="row">
+        <div class="col-12 panel-1 text-center text-capitalize">
+          <p>Back To Top</p>
+        </div>
+        <div class="col-3 panel-2">
+          <ul>
+            <li><p>Get to Know Us</p></li>
+            <li><a>Careers</a></li>
+            <li><a>Blog</a></li>
+            <li><a>About Amazon</a></li>
+            <li><a>Investor Relations</a></li>
+            <li><a>Amazon Devices</a></li>
+            <li><a>Amazon Sciences</a></li>
+          </ul>
+        </div>
+        <div class="col-3 panel-2">
+          <ul>
+            <li><p>Get to Know Us</p></li>
+            <li><a>Careers</a></li>
+            <li><a>Blog</a></li>
+            <li><a>About Amazon</a></li>
+            <li><a>Investor Relations</a></li>
+            <li><a>Amazon Devices</a></li>
+            <li><a>Amazon Sciences</a></li>
+          </ul>
+        </div>
+        <div class="col-3 panel-2">
+          <ul>
+            <li><p>Get to Know Us</p></li>
+            <li><a>Careers</a></li>
+            <li><a>Blog</a></li>
+            <li><a>About Amazon</a></li>
+            <li><a>Investor Relations</a></li>
+            <li><a>Amazon Devices</a></li>
+            <li><a>Amazon Sciences</a></li>
+          </ul>
+        </div>
+        <div class="col-3 panel-2">
+          <ul>
+            <li><p>Get to Know Us</p></li>
+            <li><a>Careers</a></li>
+            <li><a>Blog</a></li>
+            <li><a>About Amazon</a></li>
+            <li><a>Investor Relations</a></li>
+            <li><a>Amazon Devices</a></li>
+            <li><a>Amazon Sciences</a></li>
+          </ul>
+        </div>
+        <div class="panel-3">
+          <div class="logo col-12">
+            <img src="unique.png" alt="" class="img-fluid" width="50px" />
+          </div>
+        </div>
+        <div class="panel-4">
+          <div class="col-12 text-center pages">
+            <a>Conditions of Use</a>
+            <a>Privacy Notice</a>
+            <a>Your Ads Privacy Choices</a>
+          </div>
+          <div class="col-12 text-center copyright">
+            @1996-2023,Amazon.com, Inc. or its affliates
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

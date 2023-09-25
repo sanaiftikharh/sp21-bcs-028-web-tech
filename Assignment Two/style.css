@@ -250,3 +250,8 @@ ul {
 
   color: white;
 }
+/* featured text */
+.customized-text hr {
+  border: 1px solid #222f3d; /* Border style and color */
+  margin-top: 5px 0;
+}

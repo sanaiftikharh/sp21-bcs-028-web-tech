@@ -1,56 +1,45 @@
-$(function () {
-  $("#registraionForm").validate({
+$(document).ready(function () {
+  $("#regform").validate({
     rules: {
-      firstname: "required",
-      username: {
-        minlength: 4,
-        required: true,
-      },
-      phonenumber: {
-        Number: true,
-      },
+      name: "required",
+      lname: "required",
+      username: "required",
       email: {
         required: true,
-        email: true,
+        email: true, // Validates that the input is an email address
       },
       password: {
         required: true,
-        minlength: 6,
+        minlength: 5,
       },
-      confirmpassword: {
+      Cpassword: {
         required: true,
-        minlength: 6,
+        minlength: 5,
         equalTo: "#password",
       },
     },
     messages: {
-      firstname: "Please enter your firstname",
-      lastname: "Please enter your lastname",
-      username: {
-        minlength: "Your username nust be of atleast 4 characters",
-        required: "Username is required",
-      },
-      phonenumber: {
-        Number: "Please enter in numbers",
-      },
+      name: "Please enter your first name",
+      lname: "Please enter your last name",
+      username: "Please enter a username",
       email: {
-        required: "Please enter your email",
+        required: "Please enter  email address",
+        email: " Enter a valid email address",
       },
       password: {
-        required: "Please enter a password",
-        minlength: "Your password must be at least 6 characters long",
+        required: "Please enter your password.",
+        minlength: "Enter a password with at least 5 characters.",
       },
-      confirmpassword: {
-        required: "Please enter a password",
-        minlength: "Your password must be at least 6 characters long",
-        equalTo: "Please Enter the same password as above",
+      Cpassword: {
+        required: "Confirm your password.",
+        minlength: "Password is not matching.",
+        equalTo: "Password is not matching.",
       },
     },
   });
-  $("#registrationForm").submit(function (event) {
+});
+$(document).ready(function () {
+  $("#regform").submit(function (event) {
     event.preventDefault();
-    // Form validation has already been done.
-    // You can handle further processing or submission here.
-    // For example, you can send the data to the server via AJAX.
   });
 });

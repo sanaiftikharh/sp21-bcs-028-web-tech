@@ -1,9 +1,15 @@
 $(document).ready(function () {
   $("#regform").validate({
     rules: {
-      name: "required",
-      lname: "required",
-      username: "required",
+      name: {
+        required: true,
+        minlength: 4,
+      },
+
+      username: {
+        required: true,
+        minlength: 4,
+      },
       email: {
         required: true,
         email: true, // Validates that the input is an email address
@@ -19,9 +25,15 @@ $(document).ready(function () {
       },
     },
     messages: {
-      name: "Please enter your first name",
+      name: {
+        required: "Please enter your firstname",
+        minlength: "Enter username with atleast 4 characters.",
+      },
       lname: "Please enter your last name",
-      username: "Please enter a username",
+      username: {
+        required: "Please enter a username",
+        minlength: "Enter username with atleast 4 characters.",
+      },
       email: {
         required: "Please enter  email address",
         email: " Enter a valid email address",

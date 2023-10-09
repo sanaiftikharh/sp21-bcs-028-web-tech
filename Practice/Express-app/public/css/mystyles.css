@@ -1,0 +1,36 @@
+/* This is CSS file which is served Via express */
+* {
+  padding: 0;
+  margin: 0;
+}
+#middle h1 {
+  color: white;
+}
+h1 {
+  color: black;
+}
+ul {
+  list-style: none;
+}
+#menu li {
+  padding-left: 2rem;
+  display: inline;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
+#menu-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(251, 89, 36);
+  height: 10vh;
+}
+#middle {
+  height: 90vh;
+  background-color: rgb(29, 44, 73);
+  display: flex;
+  justify-content: center;
+}

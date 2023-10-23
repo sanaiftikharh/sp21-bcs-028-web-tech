@@ -134,3 +134,22 @@ li {
 .footer .col-4 a {
   color: #ada6a1;
 }
+/*  */
+.district {
+  color: orange;
+}
+.reported {
+  padding-bottom: 1rem !important;
+}
+/*  */
+.footer-above {
+  background-color: #333;
+  border: 2px solid orange;
+}
+.footer-above .col-6 p {
+  color: white;
+  padding: 0 !important;
+}
+.footer-above .col-6 .mini {
+  color: orange;
+}

@@ -1,1 +1,8 @@
 <h1>Stitched</h1>
+<% stitched.forEach(stitch => { %>
+<div class="stitched">
+  <img src="stitch.image" alt="" />
+  <h3 class="image"><%= stitch.image %></h3>
+  <p class="color"><%= stitch.color %></p>
+</div>
+<% }) %>

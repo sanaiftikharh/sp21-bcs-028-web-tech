@@ -1,0 +1,23 @@
+label {
+  flex: 30%;
+}
+
+form {
+  max-width: 800px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  background-color: lightgray;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  flex: 70%;
+  padding: 5px 10px 5px 10px;
+}

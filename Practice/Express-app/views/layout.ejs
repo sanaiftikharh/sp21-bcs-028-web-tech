@@ -1,3 +1,5 @@
+<!-- Master-slave pages -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,7 +31,11 @@
   </head>
   <body>
     <%- include('./partials/top-menu') %>
-    <hr />
+    <div class="container">
+      <% if (flash) { %>
+      <div class="alert alert-<%-flash.type%>"><%- flash.message %></div>
+      <% } %>
+    </div>
     <div id="middle"><%- body %></div>
     <%- defineContent('footer') %>
     <script src="/js/myscript.js"></script>

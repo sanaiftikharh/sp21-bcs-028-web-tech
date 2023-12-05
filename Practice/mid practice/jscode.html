@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Item to List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <ul id="itemList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <input type="text" id="newItemText" placeholder="Enter item text" />
+    <button id="addItemButton">Add Item</button>
+
+    <script>
+      // window.onload = function () {
+      //   const itemList = document.getElementById("itemList");
+      //   const newItemText = document.getElementById("newItemText");
+      //   const addItemButton = document.getElementById("addItemButton");
+
+      //   addItemButton.addEventListener("click", function () {
+      //     const text = newItemText.value;
+      //     if (text !== "") {
+      //       const listItem = document.createElement("li");
+      //       listItem.textContent = text;
+      //       itemList.appendChild(listItem);
+      //       newItemText.value = "";
+      //     }
+      //   });
+      // };
+      $(document).ready(function () {
+        const itemList = $("#itemList");
+        const newItemText = $("#newItemText");
+        const addItemButton = $("#addItemButton");
+
+        addItemButton.on("click", function () {
+          const text = newItemText.val();
+          if (text !== "") {
+            // const listItem = $("<li></li>").text(text);
+            itemList.append(`<li>${text}</li>`);
+            newItemText.val("");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

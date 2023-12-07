@@ -27,6 +27,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/css/mystyles.css" />
+    <link rel="stylesheet" href="/css/landing-page.css" />
     <%- defineContent('style') %>
   </head>
   <body>
@@ -37,7 +38,7 @@
       <% } %>
     </div>
     <div id="middle"><%- body %></div>
-    <%- defineContent('footer') %>
+    <%- include('./partials/footer') %> <%- defineContent('footer') %>
     <script src="/js/myscript.js"></script>
   </body>
 </html>

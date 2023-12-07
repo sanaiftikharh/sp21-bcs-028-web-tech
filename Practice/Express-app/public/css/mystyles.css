@@ -21,7 +21,7 @@ a {
   color: white;
   font-size: larger;
 }
-#menu {
+/* #menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,10 +29,18 @@ a {
   height: 10vh;
   padding-bottom: 0;
   margin-bottom: 0;
-}
-#middle {
-  /* height: 90vh; */
+} */
+/* #middle {
   background-color: rgb(255, 209, 218);
   display: flex;
   justify-content: center;
+} */
+.login input {
+  background-color: rgb(29, 44, 73);
+  width: 50%;
+  color: white;
+}
+form {
+  margin-left: 3rem;
+  border: solid 2px black;
 }

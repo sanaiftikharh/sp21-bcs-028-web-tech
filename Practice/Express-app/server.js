@@ -40,6 +40,9 @@ app.get("/all", function (req, res) {
 app.get("/new-arrival", function (req, res) {
   res.render("products/new-arrival");
 });
+app.get("/kids", function (req, res) {
+  res.render("products/kids");
+});
 app.get("/cart", sessionauth, function (req, res) {
   res.render("cart");
 });

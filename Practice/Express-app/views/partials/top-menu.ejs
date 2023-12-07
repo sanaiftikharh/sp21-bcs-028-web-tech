@@ -1,4 +1,4 @@
-<ul id="menu">
+<!-- <ul id="menu">
   <li><a href="/">Home Page</a></li>
   <li><a href="/all">All</a></li>
   <li><a href="/stitched">Stitched</a></li>
@@ -15,4 +15,106 @@
   <li><a href="/logout">Logout</a></li>
 
   <% } %>
-</ul>
+</ul> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white custom-navbar">
+  <div class="container">
+    <a
+      class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
+      href="/"
+    >
+      <img
+        src="/assets/unique.png"
+        class="img-fluid"
+        alt="Bootstrap"
+        width="100"
+        height="30"
+      />
+    </a>
+    <div class="order-lg-2 nav-btns nav-icons">
+      <button type="button" class="btn position-relative">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <!-- <span
+        class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+        >5</span 
+      > -->
+      </button>
+      <button type="button" class="btn position-relative">
+        <i class="fa-solid fa-heart"></i>
+        <!-- <span
+        class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+        >2</span
+      > -->
+      </button>
+      <button type="button" class="btn position-relative">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse order-lg-1"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="nav-item">
+          <a
+            class="nav-link text-uppercase text-dark"
+            aria-current="page"
+            href="/"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/all">All</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/stitched"
+            >Stitched</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/unstitched"
+            >Unstitched</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/contact-us"
+            >Contact</a
+          >
+        </li>
+        <% if (!user) { %>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/register"
+            >Register</a
+          >
+        </li>
+
+        <% } else {%> <% if (user.role=="admin") { %>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/admin/stitched"
+            >Admin Area</a
+          >
+        </li>
+        <% } %>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/logout">Logout</a>
+        </li>
+
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

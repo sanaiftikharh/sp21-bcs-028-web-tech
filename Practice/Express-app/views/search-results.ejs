@@ -1,0 +1,33 @@
+<p>Search Results</p>
+
+<% if (results.length > 0) { %> <% results.forEach(result => { %>
+<div class="result">
+  <img
+    src="data:<%= result.image.contentType %>;base64,<%= result.image.data.toString('base64') %>"
+    alt="<%= result.details %>"
+  />
+
+  <p class="color">ID: <%= result._id %></p>
+  <p class="price"><%= result.size %></p>
+  <p class="price">PKR <%= result.price %></p>
+  <p class="color"><%= result.color %></p>
+  <div class="display">
+    <% if (user) { %>
+    <button
+      class="btn btn-warning"
+      onclick="location.href = '/cart/' + '<%= result._id %>';"
+    >
+      Add to cart
+    </button>
+    <button
+      class="btn btn-danger"
+      onclick="location.href = '/cart/' + '<%= result._id %>';"
+    >
+      Buy Now
+    </button>
+    <% } %>
+  </div>
+</div>
+<% }); %> <% } else { %>
+<p>No items found.</p>
+<% } %>

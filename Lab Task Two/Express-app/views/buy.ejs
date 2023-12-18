@@ -1,0 +1,54 @@
+<h1 class="buy">Buy Now</h1>
+
+<form action="" method="post" class="buy">
+  <div>
+    <label for="totalAmount">Total Amount:</label>
+    <input
+      type="text"
+      id="totalAmount"
+      name="totalAmount"
+      value="<%= results.price %>"
+      required
+      readonly
+    />
+  </div>
+
+  <div>
+    <label for="addressLine1">Address Line 1:</label>
+    <input type="text" id="addressLine1" name="addressLine1" required />
+  </div>
+
+  <div>
+    <label for="addressLine2">Address Line 2:</label>
+    <input type="text" id="addressLine2" name="addressLine2" />
+  </div>
+
+  <div>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required />
+  </div>
+
+  <div>
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required />
+  </div>
+
+  <div>
+    <label for="zipCode">Zip Code:</label>
+    <input type="text" id="zipCode" name="zipCode" required />
+  </div>
+
+  <div>
+    <label for="shippingAddress.country">Country:</label>
+    <input type="text" id="country" name="country" required />
+  </div>
+
+  <div>
+    <label for="paymentMethod">Payment Method:</label>
+    <select id="paymentMethod" name="paymentMethod" required>
+      <option value="Cash on Delivery">Cash on Delivery</option>
+    </select>
+  </div>
+
+  <button type="submit">Buy Now</button>
+</form>

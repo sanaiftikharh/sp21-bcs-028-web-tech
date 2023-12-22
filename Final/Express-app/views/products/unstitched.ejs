@@ -1,0 +1,126 @@
+<!-- products/stitched.ejs -->
+<div class="stitched">
+  <h1>Stitched</h1>
+  <div class="filter">
+    <div class="color">
+      <label>Filter by Color:</label>
+      <select id="colorFilter">
+        <option value="">All Colors</option>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+        <option value="purple">purple</option>
+        <option value="orange">orange</option>
+        <option value="yellow">yellow</option>
+        <!-- Add more color options as needed -->
+      </select>
+      <button onclick="applyColorFilter()" class="btn btn-warning">
+        Apply Filter
+      </button>
+    </div>
+    <div class="searchicon">
+      <label for="search">Search by ID:</label>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          id="searchtext"
+        />
+        <a type="button" onclick="performSearch()"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></a>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <% var colorFilter = colorFilter || ''; %> <% stitched.forEach((stitch,
+    index) => { if (!colorFilter || stitch.color === colorFilter) { %>
+    <div
+      class="col-lg-4 col-md-4 col-sm-6 stitched1"
+      data-id="<%= stitch._id %>"
+    >
+      <div class="stitched">
+        <img
+          src="data:<%= stitch.image.contentType %>;base64,<%= stitch.image.data.toString('base64') %>"
+          alt="<%= stitch.details %>"
+        />
+        <p class="price">Stitched</p>
+        <p class="color">ID: <%= stitch._id %></p>
+        <p class="price"><%=stitch.size%></p>
+        <p class="price">PKR <%= stitch.price %></p>
+        <p class="color"><%= stitch.color %></p>
+
+        <div class="display">
+          <% if (user) { %>
+          <button
+            class="btn btn-warning"
+            onclick="location.href = '/unstitchedcart/' + '<%= stitch._id._id %>';"
+          >
+            Add to cart
+          </button>
+          <button
+            class="btn btn-danger"
+            onclick="location.href = '/buy/' + '<%= stitch._id._id %>';"
+          >
+            Buy Now
+          </button>
+
+          <% } %>
+        </div>
+        <!-- <p class="details">Details: <%= stitch.details %></p> -->
+      </div>
+    </div>
+    <% if ((index + 1) % 3 === 0) { %>
+    <!-- Close the current row and start a new one after every 4 items -->
+  </div>
+  <div class="row"><% } %> <% }}) %></div>
+
+  <!-- Pagination -->
+
+  <div class="page">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="/unstitched/?page=<%= currentPage - 1 %>"
+            >Previous</a
+          >
+        </li>
+        <% for (let i = 1; i <= totalPages; i++) { %>
+        <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+          <a class="page-link" href="/unstitched/?page=<%= i %>"><%= i %></a>
+        </li>
+        <% } %>
+        <li class="page-item">
+          <a class="page-link" href="/unstitched/?page=<%= currentPage + 1 %>"
+            >Next</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://unpkg.com/ion-rangeslider@2.3.1/js/ion.rangeSlider.min.js"></script>
+<script>
+  function performSearch() {
+    var searchText = document.getElementById("searchtext").value.toLowerCase();
+
+    $(".stitched1").each(function () {
+      const id = $(this).data("id");
+
+      // Use color instead of title
+      if (id.includes(searchText)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  }
+
+  function applyColorFilter() {
+    const colorFilter = document.getElementById("colorFilter").value;
+    window.location.href = `/unstitched/?colorFilter=${colorFilter}`;
+  }
+</script>

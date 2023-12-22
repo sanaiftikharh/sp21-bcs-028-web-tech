@@ -1,0 +1,75 @@
+<form action="/calculate" method="post">
+  <div class="calculator">
+    <div class="operand1 cal mb-3">
+      <label for="operand1" class="form-label">Operand 1</label>
+      <input
+        type="text"
+        name="operand1"
+        id="operand1"
+        required
+        class="form-control"
+      />
+    </div>
+    <div class="operation cal">
+      <label for="operation">Operation</label>
+      <select
+        class="form-select"
+        name="operation"
+        aria-label="Default select example"
+      >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+      </select>
+    </div>
+    <div class="operand2 cal mb-3">
+      <label for="operand2" class="form-label">Operand 2</label>
+      <input
+        type="text"
+        name="operand2"
+        id="operand2"
+        required
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="button">
+    <button
+      type="submit"
+      class="btn btn-success cal_button"
+      onclick="window.location.href = '/calculator';"
+    >
+      Calculate
+    </button>
+  </div>
+</form>
+<div class="my_table">
+  <table class="table table-striped-rows">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Operand 1</th>
+        <th scope="col">Operation</th>
+        <th scope="col">Operand 2</th>
+        <th scope="col">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (results && results.length > 0) { %> <% results.forEach((result,
+      index) => { %>
+      <tr>
+        <!-- <th scope="row"><%= index + 1 %></th> -->
+        <td><%= result.operand1 %></td>
+        <td><%= result.operation %></td>
+        <td><%= result.operand2 %></td>
+        <td><%= result.result %></td>
+      </tr>
+      <% }); %> <% } else { %>
+      <tr>
+        <td colspan="5"><h3>No previous data</h3></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>

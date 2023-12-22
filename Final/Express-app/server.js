@@ -11,7 +11,14 @@ const app = express();
 
 // Middleware to serve static files from the "public" directory
 app.use(cookieParser());
-app.use(session({ secret: "Shh, its a secret!" }));
+// app.use(session({ secret: "Shh, its a secret!" }));
+app.use(
+  session({
+    secret: "your_secret_key",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 app.use(express.static("public"));
 app.use(expressLayouts);
 app.use(express.json());
@@ -202,8 +209,8 @@ app.get("/kids", function (req, res) {
 app.get("/contact-us", function (req, res) {
   res.render("contact-us");
 });
-app.get("/jquery", function (req, res) {
-  res.render("jquery");
+app.get("/calculator.html", function (req, res) {
+  res.render("calculator");
 });
 
 let stitchedApiRouter = require("./routes/api/stitched");
@@ -215,6 +222,8 @@ let registerApiRouter = require("./routes/site/auth");
 let loginApiRouter = require("./routes/site/auth");
 let cartRouter = require("./routes/site/cart");
 let buyRouter = require("./routes/site/buy");
+let calculatorRouter = require("./routes/site/calculator");
+
 app.use(stitchedApiRouter);
 app.use(unstitchedApiRouter);
 app.use(kidApiRouter);
@@ -222,6 +231,7 @@ app.use(registerApiRouter);
 app.use(loginApiRouter);
 app.use(cartRouter);
 app.use(buyRouter);
+app.use(calculatorRouter);
 
 app.use("/admin", sessionauth, admin, require("./routes/admin/stitched"));
 app.use("/admin", sessionauth, admin, require("./routes/admin/unstitched"));

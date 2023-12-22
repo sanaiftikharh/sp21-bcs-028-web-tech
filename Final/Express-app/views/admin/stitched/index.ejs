@@ -1,0 +1,49 @@
+<div class="admin">
+    <h2>Stitched</h2>
+    <a class="btn btn-danger add-button" href="/admin/stitched/add" >Add New Dress</a>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Details</th>
+            <th>Color</th>
+            <th>Action</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        
+        <% if (stitched.length==0) { %>
+         <tr><td colspan="3">No Dress to display</td></tr>
+        <% } %>
+        <% for( let index = 0; index < stitched.length; index++ ) { %>
+            <tr>
+                <td class="admin-img"><img
+                    src="data:<%= stitched[index].image.contentType %>;base64,<%= stitched[index].image.data.toString('base64') %>"
+                    alt="<%= stitched[index].details %>"
+                  /></td>
+                <td><%= stitched[index].price %></td>
+                <td><%= stitched[index].details %></td>
+                <td><%= stitched[index].color %></td>
+                <td>
+                    <a href="/admin/stitched/edit/<%= stitched[index]._id %>" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/admin/stitched/delete/<%= stitched[index]._id %>" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="/admin/stitched/<%= page-1 %>">Previous</a></li>
+      <% for( let index = 1; index <= totalPages; index++ ) { %>
+        <li class="page-item"><a class="page-link" href="/admin/stitched/<%= index %>"><%= index %></a></li
+      <% } %>
+      
+      <li class="page-item"><a class="page-link" href="/admin/stitched/<%= page+1 %>">Next</a></li>
+    </ul>
+  </nav>
+</div>

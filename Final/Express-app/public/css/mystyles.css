@@ -1,0 +1,351 @@
+/* This is CSS file which is served Via express */
+* {
+  padding: 0;
+  margin: 0;
+}
+#middle h1 {
+  color: white;
+}
+h1 {
+  color: black;
+}
+ul {
+  list-style: none;
+}
+#menu li {
+  padding-left: 2rem;
+  /* display: inline; */
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
+/* #menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(251, 161, 183);
+  height: 10vh;
+  padding-bottom: 0;
+  margin-bottom: 0;
+} */
+/* #middle {
+  background-color: rgb(255, 209, 218);
+  display: flex;
+  justify-content: center;
+} */
+/* Sign Up */
+
+/* Login */
+.login {
+  color: #1d2c49 !important;
+}
+.brand-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-img img {
+  width: 85%;
+  border-radius: 10px;
+}
+.login form {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  color: #1d2c49 !important;
+}
+.login button {
+  width: 95% !important;
+  margin-left: 1rem;
+  background-color: #1d2c49 !important;
+  border-radius: 3rem;
+  height: 3rem;
+  border: none !important;
+  color: white !important;
+}
+.login-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+/* Contact Us */
+.contact img {
+  height: 30rem;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.contact-form {
+  margin-top: 5rem;
+}
+.contact-form form {
+  border: none !important;
+}
+.contact-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.contact-button {
+  width: 95% !important;
+  margin-left: 1rem;
+  background-color: black !important;
+  border-radius: 3rem;
+  height: 3rem;
+}
+/*  */
+.stitched img {
+  height: 20rem;
+  width: 20rem;
+  margin-left: 2rem;
+}
+.stitched .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+}
+.display button {
+  margin: 4px;
+}
+.stitched {
+  margin-bottom: 4px;
+}
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color {
+  text-align: center;
+}
+/* cart */
+.cart img {
+  height: 15rem;
+}
+/* add */
+.add-button {
+  width: 15rem;
+  margin: 10px;
+  background-color: rgb(251, 89, 36) !important;
+}
+.admin {
+  margin: 8px;
+}
+.admin-img img {
+  width: 10rem;
+  height: 10rem;
+}
+.admin h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1d2c49;
+  padding: 5px;
+}
+/* cart */
+.content {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+.content table {
+  margin: 10px;
+  border: solid 2px #1d2c49;
+}
+
+.content h2 {
+  color: #1d2c49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.content-foot {
+  /* padding-right: -10rem !important; */
+  margin-right: -25rem !important;
+  float: right !important;
+  text-decoration: none;
+}
+.cart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.cart-button button {
+  width: 10rem;
+}
+/*  */
+.add-items {
+  margin: 4rem;
+}
+.add-items form {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+/*  */
+.stitched h1 {
+  color: #1d2c49 !important;
+  text-align: center;
+  margin: 3px;
+}
+/*  */
+.thank-you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: #1d2c49 !important;
+  flex-direction: column;
+}
+.thank-you h1 {
+  color: #1d2c49 !important;
+}
+.thank-you i {
+  font-size: 5rem;
+}
+
+/*  */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.color {
+  margin: 4px;
+}
+/*  */
+.searchicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*  */
+.orders {
+  color: #1d2c49 !important;
+
+  text-align: center;
+  margin: 10px;
+}
+
+/*  */
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result img {
+  height: 20rem;
+}
+/*  */
+.buy {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+.buy h1 {
+  color: #1d2c49 !important;
+}
+
+.buy label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+.buy input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buy button {
+  background-color: #1d2c49;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+}
+
+/*  */
+.buy-now {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buy-now form {
+  display: grid;
+  gap: 15px;
+}
+
+.buy-now label {
+  font-weight: bold;
+}
+
+.buy-now input,
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.buy-now button {
+  background-color: #1d2c49;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+/*  */
+.calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.cal {
+  margin: 5px;
+}
+.cal_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50%;
+  background-color: rgb(36, 112, 112) !important;
+  border: none !important;
+}
+/*  */
+.my_table {
+  margin: 2rem;
+}

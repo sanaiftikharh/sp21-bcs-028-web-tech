@@ -1,7 +1,7 @@
 function fetchData() {
   console.log("Fetching Start....");
   $.ajax({
-    url: "/api/stitched",
+    url: "https://localhost:5000/api/stitched",
     success: responseArrived,
   });
   console.log("Request Sent ...");
@@ -33,7 +33,7 @@ $(function () {
 
 function deleteRec(id) {
   $.ajax({
-    url: "/api/stitched/" + id,
+    url: "https://usman-fake-api.herokuapp.com/api/recipes/" + id,
     method: "DELETE",
     success: fetchData,
   });

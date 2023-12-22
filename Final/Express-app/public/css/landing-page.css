@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  overflow-x: hidden;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+#header .fixed-top {
+  box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 5%);
+}
+
+.custom-navbar {
+  background-color: rgb(251, 89, 36) !important;
+}
+.nav-link {
+  color: white !important;
+}
+.nav-link:hover {
+  color: rgb(29, 44, 73) !important;
+}
+.navbar-toggler {
+  color: rgb(29, 44, 73) !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.nav-icons i {
+  color: rgb(21, 35, 63) !important;
+}
+
+.Body {
+  background-color: rgb(29, 44, 73);
+}
+.custom-padding {
+  padding: 0 !important;
+}
+/* Home CSS */
+.home {
+  color: white;
+  /* background-color: #222f3d; */
+}
+.home-banner-text .btn {
+  background-color: rgb(251, 89, 36) !important;
+}
+.home-banner-text .btn:hover {
+  background-color: transparent;
+}
+.home-banner-1,
+.home-banner-2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 90% center;
+  min-height: 600px;
+  position: relative;
+}
+.home .home-banner-1 {
+  background-image: url("/assets/slide1.png");
+}
+.home .home-banner-2 {
+  background-image: url("/assets/slide3.png");
+}
+.home-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-110%, -50%);
+}
+.home-banner-text h1 {
+  font-size: 6rem;
+}
+.home .carousel-indicators [data-bs-target] {
+  background-color: white;
+  width: 2.5rem;
+  height: 0.313rem;
+}
+
+@media (max-width: 991px) {
+  .home-banner-text {
+    transform: translate(-66%, -50%);
+  }
+  .offer-title-1 {
+    font-size: x-small;
+  }
+  .heading-bigger {
+    font-size: x-small;
+  }
+}
+@media (max-width: 1040) {
+  .heading-bigger {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .home-banner-1,
+  .home-banner-2 {
+    background-position: 50%;
+    min-height: 450px;
+  }
+  .home-banner-text {
+    text-align: center;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .home-banner-text h1 {
+    font-size: 3rem;
+  }
+  .home-banner-text h2 {
+    font-size: 1.2rem;
+  }
+  .home-banner-text .btn {
+    padding: 0.5rem 1.5rem;
+  }
+}
+@media (max-width: 575px) {
+  .offer-title-1 {
+    font-size: 2rem;
+  }
+  .heading-bigger {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .home-banner-text h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Offers  */
+.offers {
+  padding-top: 2rem;
+}
+.offer-image::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+}
+.offer-image img {
+  transform: scale(1.02);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offer-box:hover .offer-image::before {
+  animation: effect_shine 1s;
+}
+@keyframes effect_shine {
+  100% {
+    left: 150%;
+  }
+}
+.offers .offer-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.offer-info-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transition: all 250ms ease-out;
+  justify-content: center;
+  align-items: center;
+}
+.offer-info-inner .heading-bigger {
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: white;
+}
+.offer-title-1 {
+  color: white !important;
+
+  font-weight: 300;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+.offers .btn {
+  color: white;
+  background-color: transparent !important;
+  border: 1px solid white !important;
+}
+.offers .btn:hover {
+  background-color: rgb(251, 89, 36) !important;
+  border: none !important;
+}
+/* footer */
+ul {
+  list-style: none;
+}
+.panel-1 {
+  background-color: #37475a;
+  color: white;
+}
+.panel-2 {
+  background-color: #222f3d;
+  color: white;
+}
+.panel-3 {
+  background-color: #222f3d;
+  margin-top: 2px;
+}
+.panel-3 img {
+  width: 100px;
+  height: 50px;
+  margin-left: 45%;
+}
+.panel-4 {
+  background-color: #37475a;
+
+  color: white;
+}
+/* featured text */
+.customized-text hr {
+  border: 1px solid #222f3d; /* Border style and color */
+  margin-top: 5px 0;
+}
+
+/*  */
+/* Add this to your stylesheet or in a <style> tag in the head of your HTML */
+.nav-buttons-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Adjust the gap between the "Cart" and "Search" elements */
+}

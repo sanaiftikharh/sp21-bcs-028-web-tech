@@ -1,0 +1,51 @@
+<%if(cart.length==0){%>
+<p>Your Cart is Empty</p>
+
+<%} else{%>
+<form action="" method="">
+  <div class="content">
+    <h2>Shopping Cart</h2>
+    <% var total = 0; %>
+    <table class="table">
+      <tbody>
+        <% cart.forEach(item => { %> <% if (item && item.details && item.price)
+        { %> <% total += Number(item.price); %>
+        <tr>
+          <td class="cart">
+            <% if (item && item.image && item.image.contentType) { %>
+            <img
+              src="data:<%= item.image.contentType %>;base64,<%= item.image.data.toString('base64') %>"
+              alt="<%= item.details %>"
+            />
+            <% } else { %>
+            <p>No image available</p>
+            <% } %>
+          </td>
+          <td><%= item.color %></td>
+          <td>PKR <%= item.price %></td>
+          <td>
+            <a href="/cart/remove/<%= item._id %>" class="btn btn-danger"
+              >Remove</a
+            >
+          </td>
+        </tr>
+        <% } %> <% }); %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="content-foot">Total: PKR <%= total %></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="cart-button">
+    <button
+      type="button"
+      class="btn btn-warning"
+      onclick="window.open('/buy-now')"
+    >
+      Buy
+    </button>
+  </div>
+</form>
+<%}%>

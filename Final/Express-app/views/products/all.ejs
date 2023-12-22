@@ -1,0 +1,53 @@
+<!-- products/stitched.ejs -->
+<h1>UnStitched</h1>
+<div class="row">
+  <% items.forEach((stitch, index) => { %>
+  <div class="col-lg-4 col-md-4 col-sm-6">
+    <div class="stitched">
+      <img
+        src="data:<%= stitch.image.contentType %>;base64,<%= stitch.image.data.toString('base64') %>"
+        alt="<%= stitch.details %>"
+      />
+      <p class="price">Stitched</p>
+      <p class="price"><%=stitch.size%></p>
+      <p class="price">PKR <%= stitch.price %></p>
+      <div class="display">
+        <p class="color"><%= stitch.color %></p>
+        <% if (user) { %>
+        <button
+          class="btn btn-warning"
+          onclick="location.href = '/unstitchedcart/' + '<%= stitch._id %>';"
+        >
+          Add to cart
+        </button>
+        <% } %>
+      </div>
+      <!-- <p class="details">Details: <%= stitch.details %></p> -->
+    </div>
+  </div>
+  <% if ((index + 1) % 3 === 0) { %>
+  <!-- Close the current row and start a new one after every 4 items -->
+</div>
+<div class="row"><% } %> <% }) %></div>
+
+<!-- Pagination -->
+
+<div class="page">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="/all/?page=<%= currentPage - 1 %>"
+          >Previous</a
+        >
+      </li>
+      <% for (let i = 1; i <= totalPages; i++) { %>
+      <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+        <a class="page-link" href="/all/?page=<%= i %>"><%= i %></a>
+      </li>
+      <% } %>
+      <li class="page-item">
+        <a class="page-link" href="/all/?page=<%= currentPage + 1 %>">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>

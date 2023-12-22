@@ -1,0 +1,73 @@
+<div class="row sign">
+  <div class="col-6 brand-img">
+    <img src="/assets/unique.png" alt="Unique brand" />
+  </div>
+
+  <div class="login col-6">
+    <form action="" method="post">
+      <div class="login-head">
+        <h2>SIGN UP</h2>
+      </div>
+      <div class="mb-3 row">
+        <label for="name" class="form-label col-sm-2">Name</label>
+
+        <div class="col-sm-10">
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            name="name"
+            value="usman"
+          />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="email" class="form-label col-sm-2">Email</label>
+
+        <div class="col-sm-10">
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            name="email"
+            value="usman.akram@gmail.com"
+          />
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="password" class="col-sm-4 form-label">Password</label>
+        <div class="col-sm-8">
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            name="password"
+            value="usman"
+          />
+          <i class="far fa-eye-slash" id="togglePassword"></i>
+        </div>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-info">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  const togglePassword = document.querySelector("#togglePassword");
+  const password = document.querySelector("#password");
+
+  togglePassword.addEventListener("click", function () {
+    // toggle the type attribute
+    const type =
+      password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+    this.classList.toggle("fa-eye-slash");
+    this.classList.toggle("fa-eye");
+  });
+
+  const toggleConfirmPassword = document.querySelector(
+    "#toggleConfirmPassword"
+  );
+</script>
